@@ -1,4 +1,4 @@
-<nav class="navbar bg-primary navbar-dark navbar-expand-lg ">
+<nav class="navbar bg-warning navbar-dark navbar-expand-lg ">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"> <h4>Second Hand</h4> <h6 class="text-center">Book Store </h6></a>
       <button
@@ -40,18 +40,18 @@
           <div style="position: relative; left:145%;">
             <button type="button" class="btn btn-success py-0 me-2"><a class="nav-link {%if request.path == "/logout/"%} active {% endif %}" href="/logout/">Log out</a></button>
           </div>
-          {% comment %} <div style="position: relative; left:147%;">
+          <div style="position: relative; left:147%;">
             <li class="nav-item">
               <a class="nav-link {%if request.path == "/cart/"%} active {% endif %} " href="/cart/">
                 <i class="fa-solid fa-cart-shopping"></i>
               </a>
             </li>
-          </div> {% endcomment %}
+          </div>
         </li>
         {% else %}
             <div style="position: relative; left:145%;">
               <button type="button" class="btn btn-success py-0 me-2"><a class="nav-link {%if request.path == "/signup/"%} active {% endif %}" href="/signup/">Sign Up</a></button>
-            <button type="button" class="btn btn-success py-0"><a class="nav-link {%if request.path == "/dashboard/"%} active {% endif %}" href="/signin/">Log in</a></button>
+            <button type="button" class="btn btn-success py-0" ><a class="nav-link {%if request.path == "/dashboard/"%} active {% endif %}" href="/signin/">Log in</a></button>
             </div>
         {% endif %}
       </div>

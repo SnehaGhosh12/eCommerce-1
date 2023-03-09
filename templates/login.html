@@ -11,8 +11,8 @@
     <title>Login</title>
     {% include 'navbar.html' %}
   </head>
-  <body>
-    <div class="container col-sm-10">
+  <body style="backdrop-filter: blur(3px); height:100%">
+    <div class="boxx" style="height:550px;margin:270px">
       <h1 class="my-5 mx-5 text-lg-center">Login</h1>
       <form method="POST">
         {% csrf_token %}
@@ -38,10 +38,6 @@
         {% endif %}
       </form>
   </div>
-    
-
-   
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>

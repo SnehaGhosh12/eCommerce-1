@@ -1,6 +1,29 @@
 body{
-    background-color: white;
+    background: url(book_bg.jpg)no-repeat center center/cover;
     font-family: 'Itim', cursive;
+    backdrop-filter: blur(3px);
+}
+
+
+.boxx{
+  padding: 20px;
+  margin: 15px;
+  margin-bottom: 4px;
+  background: rgba(0, 0, 0, 0.41);
+  border: 2px solid rgba(39, 38, 38, 0.759);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+  color: white;
+  font-weight: 200;
+}
+
+.form-control{
+    background: transparent;
+    color: black;
+}
+
+.card-text{
+    text-shadow: 2px 2px rgb(72, 71, 71);
 }
 
 .blogField{
@@ -13,4 +36,8 @@ body{
 .book{
     display: flex;
     
+}
+
+h1{
+    text-shadow: 2px 2px black;
 }

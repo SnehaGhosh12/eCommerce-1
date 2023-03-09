@@ -20,9 +20,9 @@
   </head>
   <body>
       {% include 'Navbar.html' %}
-      <center><h1 style="    font-size: 3.5rem;
+      <center><h1 style="color:white;font-size: 3.5rem;
         margin-top: 40px;
-        font-family: fantasy;"><u>Books</u></h1></center>
+        ">Books</h1></center>
       <div class="container" style="padding: 15px;">
   
         {% comment %} {% for post in posts %}
@@ -52,19 +52,20 @@
           {% endif %}
         </div>
       {% endfor %} {% endcomment %}
-      <div style="display: grid;
+      <div style="    display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 250px;
-      grid-gap: 1rem;
+      grid-auto-rows: 295px;
+      grid-gap: 2rem;
       grid-auto-flow: row;
-      margin: 45px;">
+      margin: -21px;">
         {% for post in posts %}
-          <div style="display: flex;
-          border:2px solid black;
-          border-radius:12px;
+          <div class="boxx" style="display: flex;
           justify-content: center;
           align-items: center;
-          ">
+          margin-left:10px;
+          height:278px;
+          width:420px;
+          font-weight: 200">
             {% if post.image %}
                   <img src="{{post.image.url}}" style="width: 200px; height: 100%; align-self: center;
                   border-radius: 12px;">
@@ -74,11 +75,7 @@
                                         padding: 0px 10px;">
             <h5 class="card-title" style="font-weight:600">{{post.title}}</h5>
             <p class="card-text">{{post.desc|safe}}</p>
-            <div id="cart-section">
-              <a href="{%url 'addcart' post.title %}">
-                <button class ="btn btn-primary" value="Add to cart">Add to cart</button>
-              </a>
-            </div>
+            <a href="#" class="btn btn-primary" style="">Add to Cart</a>
             {% comment %} <button class="btn btn-primary" id="{{ post.title }}" name="{{ post.title }}" value="Add to cart"></button> {% endcomment %}
           </div>  
           </div>
@@ -91,5 +88,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    
+    <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
   </body>
 </html>
